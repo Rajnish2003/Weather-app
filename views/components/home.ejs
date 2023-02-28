@@ -1,0 +1,28 @@
+<%-include('../partials/boilerplate')%>
+<%-include('../partials/navbar')%>
+
+<div class="d-flex align-items-center justify-content-center">
+
+  <div class=" card d-flex align-items-center justify-content-center" style="width: 80%; height: 70% ;">
+    <div class="card-body">
+      <h1 class="card-title">Welcome to Weather App!!!</h1>
+
+      <div class="main bg-#f5fff5">
+        <div class="container">
+          <form action="/weather" method="post">
+            <div class="form-group card-subtitle mb-2 text-muted my-3">
+              <h2><label for="place">Enter place:</label></h2>
+              <input type="text" name="place" class="form-control my-3" id="place" placeholder="Enter place name:">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+<%-include('../partials/footer')%>

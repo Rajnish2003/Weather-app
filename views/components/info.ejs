@@ -1,0 +1,23 @@
+<%-include('../partials/boilerplate') %>
+<%-include('../partials/navbar')%>
+
+
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="card" style="width: 16rem;">
+    <h4 class="text-center mt-3">WEATHER</h2>
+      <div class="container height-10%">
+        <img class="card-img-top " src="https://openweathermap.org/img/wn/<%=json.weather[0].icon%>@2x.png" alt="Card image cap">
+      </div>
+      <h5 class="card-title text-center"><%=json.name%>(<%=json.sys.country%> )</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Temperature: <%=(json.main.temp-273.15).toPrecision(4)%>&#176;C</li>
+        <li class="list-group-item">Wind-speed: <%=(json.wind.speed)%> km/hr</li>
+        <li class="list-group-item">Description: <%=(json.weather[0].description).toUpperCase()%></li>
+      </ul>
+      <div class="card-body">
+        <a href="/" class="card-link"><button class="btn btn-secondary">Back to Home</button></a>
+      </div>
+  </div>
+
+</div>
+<%-include('../partials/footer')%>
